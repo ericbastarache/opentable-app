@@ -9,7 +9,7 @@ deploy:
   provider: heroku
   app: opentable-app
 script:
-- yarn start
+- yarn build
 cache: 
   directories:
   - node_modules
