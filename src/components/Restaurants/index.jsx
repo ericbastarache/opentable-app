@@ -82,7 +82,8 @@ const mapDispatchToProps = dispatch => {
 const mapStateToProps = state => {
   return {
     restaurants: state.restaurant.get('restaurants'),
-    loading: state.restaurant.get('isLoading')
+    loading: state.restaurant.get('isLoading'),
+    error: state.restaurant.get('error')
   }
 }
 

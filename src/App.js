@@ -16,7 +16,7 @@ export class App extends React.Component {
               loading ? 
                 <Loading />
               : error ?
-              (<div className={styles.error}>
+              (<div aria-label={error} className={styles.error}>
                 {error}
               </div>) :
               <RestaurantCard restaurantData={data} />

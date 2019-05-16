@@ -21,7 +21,7 @@ const restaurant = (state = INITIAL_STATE, action) => {
     case FETCH_RESTAURANTS_SUCCESS:
       return state.merge({ restaurants: fromJS(action.payload.restaurants), isLoading: false});
     case FETCH_RESTAURANTS_FAILED:
-      return state.merge({error: fromJS(action.payload.err), isLoading: false});
+      return state.merge({error: fromJS(action.payload || action.payload.err), isLoading: false});
     default:
       return state;
   }

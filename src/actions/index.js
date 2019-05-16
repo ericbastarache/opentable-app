@@ -9,7 +9,13 @@ export const fetchRestaurantsList = (query, page = 1, numPerPage = 25) => {
     }).then(
       (response) => response.json()
     ).then(
-      (res) => dispatch(fetchRestaurantsSuccess(res))
+      (res) => {
+        if (res.restaurants.length > 0) {
+          dispatch(fetchRestaurantsSuccess(res))
+        } else {
+          dispatch(fetchRestaurantsFailed('Failed to get results. Please try your seach query again.'));
+        }
+      }
     ).catch(err => {
       dispatch(fetchRestaurantsFailed(err.message))
     });
