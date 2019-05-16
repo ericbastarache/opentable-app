@@ -4,7 +4,10 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.9.3",
+    "express": "^4.16.4",
+    "express-favicon": "^2.0.1",
     "immutable": "^4.0.0-rc.12",
+    "path": "^0.12.7",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-redux": "^7.0.3",
@@ -19,7 +22,7 @@
     "redux-mock-store": "^1.5.3"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
