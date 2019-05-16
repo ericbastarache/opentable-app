@@ -1,7 +1,7 @@
 ## How long did you spend on the coding test?
 
-- I spent about 2.5 hours total:
-  - development: 1 hours
+- I spent about 3 hours total:
+  - development: 1.5 hour
   - testing: 1 hour
   - deployment: .5 hours
 
@@ -17,7 +17,7 @@ What I would add to the application is as follows:
 - I would clean up styling so that the app is more presentable
 
 ### Tests
-- I would add a lot more test cases, and I would probably change my usage of `redux-thunks` to `redux-saga` so that I could leverage generator functions and make mocking api calls and requests easy to test (with thunks they aren't that easy to mock or test)
+- I would add a lot more test cases ( I feel the amount of test cases at the moment are lacking substantially ), and I would probably change my usage of `redux-thunks` to `redux-saga` so that I could leverage generator functions and make mocking api calls and requests easy to test (with thunks they aren't that easy to mock or test)
 
 ## What was the most useful feature that was added to the latest version of your chosen language?
 
@@ -69,7 +69,7 @@ If the database queries weren't taking too long, I would next open up the Chrome
 
 ## How would you improve the API that you just used?
 
-- I wouldn't put it behind a barrier (3-4 weeks to be approved to use their API). This alone would likely improve the API a lot as more developers could use the API, find things that they would like improved and provide that feedback. I would also add the ability to see the restaurant rating so that users can determine if they would want to eat at that particular restaurant, and I would even probably expose a method that just contained data for reservation information (most reserved restaurants) so that people could either a) visualize the data or b) inform the general public about the restaurant so they could eat there as well.
+- I wouldn't the API behind a barrier (3-4 weeks to be approved to use their API). This alone would likely improve the API a lot as more developers could use the API, find things that they would like improved and provide that feedback. I would also add the ability to see the restaurant rating so that users can determine if they would want to eat at that particular restaurant, and I would even probably expose a method that just contained data for reservation information (most reserved restaurants) so that people could either a) visualize the data or b) inform the general public about the restaurant so they could eat there as well.
 
 ## Please describe yourself using JSON
 
