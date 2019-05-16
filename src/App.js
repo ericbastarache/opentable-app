@@ -1,26 +1,31 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import Restaurants from 'components/Restaurants';
+import RestaurantCard from 'components/RestaurantCard';
+import Loading from 'components/Loading';
+import styles from './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+export class App extends React.Component {
+  render () {
+    return (
+      <div className="App">
+        <Restaurants
+          searchLabel='Input city to search for restaurants in here.'
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          {({data, loading, error}) => {
+            return (
+              loading ? 
+                <Loading />
+              : error ?
+              (<div className={styles.error}>
+                {error}
+              </div>) :
+              <RestaurantCard restaurantData={data} />
+            )
+          }}
+        </Restaurants>
+      </div>
+    );
+  }
 }
 
 export default App;
