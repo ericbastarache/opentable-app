@@ -4,7 +4,7 @@ export const fetchRestaurantsList = (query, page = 1, numPerPage = 25) => {
   return dispatch => {
     dispatch(loading());
     fetch(
-      `http://opentable.herokuapp.com/api/restaurants?city=${query}&page=${page}&per_page=${numPerPage}`, {
+      `https://opentable.herokuapp.com/api/restaurants?city=${query}&page=${page}&per_page=${numPerPage}`, {
         method: 'GET'
     }).then(
       (response) => response.json()
