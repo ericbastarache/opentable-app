@@ -3,21 +3,16 @@ node_js:
 - 8
 before_install:
 - npm i -g npm@5.3.0
-ignore:
-- config/dev.js
 deploy:
   provider: heroku
-  app: opentable-app
   api_key:
-    secure: QScgICssVPT22ahWrV5D8zS+d32zUd0zeN9HEvLoJIHlle1EgqVKppa9cxdGhqgPw3Mq6fD1lQeK3J1HjXe9FyFcd0tJGdEpdLCApUwzIRrNW96KfhFc3ugE91KucSv7UxS9oP1g5E+YDVrcj46D6lMXZtPK8mkojpAZMq79ooyJiGVAiOJ5Rtff7WJtRMSQ4hORi5YorI7JL3HBZnK3Q5WKkVlnHkuC4eLFtM0K8u+bzub6EMWakEHL4q1OF4opQ8+9viMJc1w/OC78HyiTtouP00FmISVNP5WF8eAOXFhmXSOF2MaHuvIiCOF6MtehJImb5rO+B0+kfQKMwgwIrnCLUqpZZN1unvKcw30RsP7bBz5KMkzEHVBtVOPtdMw28BpwTfV6nkS+Q9EDWjrLI5w5whT6YTVNsty6CwgSCn47IBiz9ZGoXp6jWKL1g7I1rci4S1K2S4Nnc6vAQUEoCSC3vCjZ/KbJwzQxvB4FqX3sRl44NjFBCjgYwXbXQzkSZGn4HR4FY6pcEhL3VzLp0iyb3CjaioTst87nWPBoJkFm8OWS7Tkqz6aY8CW4TlKje48ll0Wbw4Qg5Afj5GUZAKYozv1Epq8cZCQekXTuMBIaGfv+M3tLd9TpvR/345Eb0a2mIlxGehedXle/zG8H5LliqFufHI4Un0GTcPHFaWA=
-before_script:
-- yarn test
+    secure: nv43PyXLnuZ+2T/ViPNGUzGMmKwZ3DEY2uIQt/KtquQdo90XsCdYA2WvlCMo1v5v+cqXno1UF1fB+FWE+JJaiDVy84BXu9+psJaT0tUznFEYf26sXMscPBBZy+g2PyKcYNuSuhBnwE81X3RylGfWo9fh9hJmZHvnMElB1muLOnN9sNzgV+gpswVoV9rYIuLc2+VjFzSPj50fKA5xgHKTiDjZ1nAOU5szlXUpme/ht2dGri0sMc/uiTbrQEsZARbcOlmx6+gxwxc9bDpW6/MDWV7K62FD8pviY7g3ZJdRM/KzMPnqesg5prWvU8Rv3aqsQ2vTja5dXzcH20H4N/7cAlScV9r2P+4ANFWSMWXl0mqIw/53KQsvSny7mJ8MgpJ4jcHawsKLJFnUWJAI6Oz8kux0UzO2fEXCG1FgsnWT7xINVSEv88hkCk85ZBHph3KL7/nXzDP/3RigDg6lohMMvuz1l8TYLV/85l0wXEVvmAve0aM1GKdZHIUI7XfXTLJVPvRTLfpuI3/ToCsUXcduUuMngNX52xT/a6J7KepgVUXFd9ru/ZEtrZ8g34nwauLv/+nC+5dd/Rw+YB4mM33xwff+KYwSjxDQi9WrQP2P5BsRPBXPaiHsAoCVZRzke0ZtGY6/v32S89GXrZcDTzoSIdLkZHFAwaO6wphd5CBbyeY=
+  app: opentable-app
+  on:
+    branch: master
 script:
 - yarn build
-after_deploy:
-- yarn global add serve
-- serve -s build
-cache: 
+cache:
   directories:
   - node_modules
 notifications:
