@@ -8,10 +8,12 @@ ignore:
 deploy:
   provider: heroku
   app: opentable-app
+  api_key:
+    secure: QScgICssVPT22ahWrV5D8zS+d32zUd0zeN9HEvLoJIHlle1EgqVKppa9cxdGhqgPw3Mq6fD1lQeK3J1HjXe9FyFcd0tJGdEpdLCApUwzIRrNW96KfhFc3ugE91KucSv7UxS9oP1g5E+YDVrcj46D6lMXZtPK8mkojpAZMq79ooyJiGVAiOJ5Rtff7WJtRMSQ4hORi5YorI7JL3HBZnK3Q5WKkVlnHkuC4eLFtM0K8u+bzub6EMWakEHL4q1OF4opQ8+9viMJc1w/OC78HyiTtouP00FmISVNP5WF8eAOXFhmXSOF2MaHuvIiCOF6MtehJImb5rO+B0+kfQKMwgwIrnCLUqpZZN1unvKcw30RsP7bBz5KMkzEHVBtVOPtdMw28BpwTfV6nkS+Q9EDWjrLI5w5whT6YTVNsty6CwgSCn47IBiz9ZGoXp6jWKL1g7I1rci4S1K2S4Nnc6vAQUEoCSC3vCjZ/KbJwzQxvB4FqX3sRl44NjFBCjgYwXbXQzkSZGn4HR4FY6pcEhL3VzLp0iyb3CjaioTst87nWPBoJkFm8OWS7Tkqz6aY8CW4TlKje48ll0Wbw4Qg5Afj5GUZAKYozv1Epq8cZCQekXTuMBIaGfv+M3tLd9TpvR/345Eb0a2mIlxGehedXle/zG8H5LliqFufHI4Un0GTcPHFaWA=
 script:
 - yarn start
-cache: 
+cache:
   directories:
   - node_modules
-nodifications: 
+nodifications:
   email: false
