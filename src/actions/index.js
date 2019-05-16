@@ -17,7 +17,6 @@ export const fetchRestaurantsList = (query, page = 1, numPerPage = 25) => {
 }
 
 export const fetchRestaurantsSuccess = (data) => {
-  console.log({data});
   return {
     type: types.FETCH_RESTAURANTS_SUCCESS,
     payload: data
