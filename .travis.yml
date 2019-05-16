@@ -8,6 +8,7 @@ deploy:
   api_key:
     secure: nv43PyXLnuZ+2T/ViPNGUzGMmKwZ3DEY2uIQt/KtquQdo90XsCdYA2WvlCMo1v5v+cqXno1UF1fB+FWE+JJaiDVy84BXu9+psJaT0tUznFEYf26sXMscPBBZy+g2PyKcYNuSuhBnwE81X3RylGfWo9fh9hJmZHvnMElB1muLOnN9sNzgV+gpswVoV9rYIuLc2+VjFzSPj50fKA5xgHKTiDjZ1nAOU5szlXUpme/ht2dGri0sMc/uiTbrQEsZARbcOlmx6+gxwxc9bDpW6/MDWV7K62FD8pviY7g3ZJdRM/KzMPnqesg5prWvU8Rv3aqsQ2vTja5dXzcH20H4N/7cAlScV9r2P+4ANFWSMWXl0mqIw/53KQsvSny7mJ8MgpJ4jcHawsKLJFnUWJAI6Oz8kux0UzO2fEXCG1FgsnWT7xINVSEv88hkCk85ZBHph3KL7/nXzDP/3RigDg6lohMMvuz1l8TYLV/85l0wXEVvmAve0aM1GKdZHIUI7XfXTLJVPvRTLfpuI3/ToCsUXcduUuMngNX52xT/a6J7KepgVUXFd9ru/ZEtrZ8g34nwauLv/+nC+5dd/Rw+YB4mM33xwff+KYwSjxDQi9WrQP2P5BsRPBXPaiHsAoCVZRzke0ZtGY6/v32S89GXrZcDTzoSIdLkZHFAwaO6wphd5CBbyeY=
   app: opentable-app
+  strategy: git
   on:
     branch: master
 script:
