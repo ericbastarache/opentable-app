@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- 8
+before_install:
+- npm i -g npm@5.3.0
+ignore:
+- config/dev.js
+deploy:
+  provider: heroku
+  app: opentable-app
+script:
+- yarn start
+cache: 
+  directories:
+  - node_modules
+nodifications: 
+  email: false
